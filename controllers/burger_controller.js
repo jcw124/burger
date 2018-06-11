@@ -3,8 +3,6 @@
 // burger.js
 // Create the router for the app, and export the router at the end of your file.
 
-
-
 const EXPRESS = require("express");
 
 const ROUTER = EXPRESS.Router();
@@ -25,12 +23,12 @@ ROUTER.get("/", function(req, res) {
 
 ROUTER.post("/api/burger", function(req, res) {
   burger.create([
-    "burger_name", "devoured" 
+    'burger_name'
   ], [
-    req.body.name, req.body.devoured
+    req.body.burger_name
   ], function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.redirect("/");
   });
 });
 

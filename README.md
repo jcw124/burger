@@ -1,5 +1,3 @@
-ReadMe Template
-
 # Burger Week 14 Node Express Handlebars Homework
 
 ##Overview 
@@ -23,7 +21,7 @@ Be opinionated! There are many ways to solve a problem with code and there are m
 Node.js
 NPM Packages
     Express
-    Handele Bars
+    Handel Bars
     Body Parser
 MYSQL
 

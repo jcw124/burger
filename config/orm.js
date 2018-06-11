@@ -1,5 +1,5 @@
 // Import MySQL connection.
-let connection = require("../config/connection.js");
+let CONNECTION = require("../config/connection.js");
 
 // Helper function for SQL syntax.
 function printQuestionMarks(num) {
@@ -40,7 +40,7 @@ function printQuestionMarks(num) {
 let orm = {
     all: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
-      connection.query(queryString, function(err, result) {
+      CONNECTION.query(queryString, function(err, result) {
         if (err) {
           throw err;
         }
@@ -59,7 +59,7 @@ let orm = {
   
       console.log(queryString);
   
-      connection.query(queryString, vals, function(err, result) {
+      CONNECTION.query(queryString, vals, function(err, result) {
         if (err) {
           throw err;
         }
@@ -77,7 +77,7 @@ let orm = {
       queryString += condition;
   
       console.log(queryString);
-      connection.query(queryString, function(err, result) {
+      CONNECTION.query(queryString, function(err, result) {
         if (err) {
           throw err;
         }
